@@ -1,0 +1,53 @@
+name: Check
+on: [push, pull_request]
+permissions:
+  contents: read
+concurrency:
+  group: check-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  privacy:
+    # Public standard runners are free; private repositories use local checks.
+    if: ${{ github.event.repository.private == false }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/setup-privacy.mjs --tools-only
+      - name: Scan new commits and commit identities
+        env:
+          PRIVACY_EVENT: ${{ github.event_name }}
+          PRIVACY_BEFORE: ${{ github.event.before }}
+          PRIVACY_BASE: ${{ github.event.pull_request.base.sha }}
+          PRIVACY_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        shell: bash
+        run: |
+          if [ "$PRIVACY_EVENT" = "pull_request" ]; then
+            node scripts/privacy-check.mjs --range "$PRIVACY_BASE..$PRIVACY_HEAD"
+          elif [ -n "$PRIVACY_BEFORE" ] && [[ ! "$PRIVACY_BEFORE" =~ ^0+$ ]]; then
+            node scripts/privacy-check.mjs --range "$PRIVACY_BEFORE..$PRIVACY_HEAD"
+          else
+            node scripts/privacy-check.mjs --all
+          fi
+  check:
+    needs: privacy
+    if: ${{ github.event.repository.private == false }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+      - run: npm run smoke

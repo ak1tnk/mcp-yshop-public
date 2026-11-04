@@ -1,0 +1,32 @@
+import assert from "node:assert/strict";
+import { mkdtemp, rm, symlink, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import test from "node:test";
+import { readImage } from "../src/images.js";
+
+test("image bytes, extension, size and symlink targets are checked before upload", async t => {
+  const dir = await mkdtemp(join(tmpdir(), "mcp-yshop-image-"));
+  t.after(() => rm(dir, { recursive: true, force: true }));
+  const jpg = join(dir, "sample.jpg");
+  await writeFile(jpg, new Uint8Array([0xff, 0xd8, 0xff, 0x00]));
+  const image = await readImage(jpg, "abc_1.jpg");
+  assert.equal(image.mime, "image/jpeg");
+  assert.equal(image.filename, "abc_1.jpg");
+  await assert.rejects(readImage(jpg, "abc.png"), /一致しません/);
+  await assert.rejects(readImage(jpg, "../abc.jpg"), /アップロード名/);
+  await assert.rejects(readImage("relative.jpg", "abc.jpg"), /絶対パス/);
+  await assert.rejects(readImage("/tmp/credential.jpg", "abc.jpg"), /機密/);
+  const text = join(dir, "data.txt");
+  await writeFile(text, "not an image");
+  const linked = join(dir, "linked.jpg");
+  await symlink(text, linked);
+  await assert.rejects(readImage(linked, "abc.jpg"), /絶対パス/);
+  const fake = join(dir, "fake.jpg");
+  await writeFile(fake, "not an image");
+  await assert.rejects(readImage(fake, "abc.jpg"), /一致しません/);
+  const large = join(dir, "large.jpg");
+  await writeFile(large, new Uint8Array(2 * 1024 * 1024 + 1));
+  await assert.rejects(readImage(large, "abc.jpg"), /2MB/);
+  await assert.rejects(readImage(jpg, "abc.jpg", "あ".repeat(14)), /40バイト/);
+});

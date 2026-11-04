@@ -1,0 +1,37 @@
+{
+  "name": "mcp-yshop",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Yahoo!ショッピング公式APIを操作するローカルMCPサーバー",
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "node --import tsx src/index.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "check": "tsc -p tsconfig.test.json --noEmit && npm test && npm run privacy:test",
+    "smoke": "node --import tsx scripts/smoke.ts",
+    "setup": "npm run build && node dist/setup.js",
+    "privacy:setup": "node scripts/setup-privacy.mjs",
+    "privacy:check": "node scripts/privacy-check.mjs",
+    "privacy:test": "node --test test/privacy.test.mjs test/public-sync.test.mjs",
+    "public:sync": "node scripts/sync-public.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.1161.0",
+    "@modelcontextprotocol/server": "^2.4.0",
+    "fast-xml-parser": "^5.12.0",
+    "fflate": "^0.8.3",
+    "undici": "^7.30.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^6.0.0"
+  }
+}

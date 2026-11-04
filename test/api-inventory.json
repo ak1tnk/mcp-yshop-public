@@ -1,0 +1,418 @@
+[
+  {
+    "title": "注文ステータス別件数参照API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderCount.html"
+  },
+  {
+    "title": "注文検索API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderList.html"
+  },
+  {
+    "title": "注文詳細API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderInfo.html"
+  },
+  {
+    "title": "注文ステータス変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderStatusChange.html"
+  },
+  {
+    "title": "入金ステータス変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderPayStatusChange.html"
+  },
+  {
+    "title": "出荷ステータス変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderShipStatusChange.html"
+  },
+  {
+    "title": "注文内容変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderChange.html"
+  },
+  {
+    "title": "注文操作履歴一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderChangeHistory.html"
+  },
+  {
+    "title": "注文分割API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderSplit.html"
+  },
+  {
+    "title": "注文ライン追加API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderItemAdd.html"
+  },
+  {
+    "title": "支払番号発行API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderPayNumber.html"
+  },
+  {
+    "title": "クーポンキャンセルAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/orderCouponCancel.html"
+  },
+  {
+    "title": "定期購入価格別件数取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/origincount.html"
+  },
+  {
+    "title": "定期購入親注文一覧取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/list.html"
+  },
+  {
+    "title": "定期購入子注文一覧取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/replica.html"
+  },
+  {
+    "title": "定期購入親注文詳細取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/detail.html"
+  },
+  {
+    "title": "定期購入次回注文スキップAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/skip.html"
+  },
+  {
+    "title": "定期購入親注文一括解約API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/cancelmulti.html"
+  },
+  {
+    "title": "定期購入親注文解約API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/cancel.html"
+  },
+  {
+    "title": "定期購入お届け予定日変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/shipdate.html"
+  },
+  {
+    "title": "定期購入情報変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/change.html"
+  },
+  {
+    "title": "定期購入情報変更履歴一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/historylist.html"
+  },
+  {
+    "title": "定期購入情報変更履歴詳細API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/history.html"
+  },
+  {
+    "title": "定期購入変更要求登録API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/changerequest.html"
+  },
+  {
+    "title": "定期購入変更要求キャンセルAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/changerequestcancel.html"
+  },
+  {
+    "title": "定期購入変更要求一括登録API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/changerequestbulk.html"
+  },
+  {
+    "title": "定期購入変更要求一括キャンセルAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/changerequestcancelbulk.html"
+  },
+  {
+    "title": "定期購入変更要求一覧取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/changerequestlist.html"
+  },
+  {
+    "title": "定期購入変更要求詳細一覧取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/subscription/changerequestlistinfo.html"
+  },
+  {
+    "title": "商品登録API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/editItem.html"
+  },
+  {
+    "title": "商品一括更新API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/updateItems.html"
+  },
+  {
+    "title": "商品移動API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/moveItems.html"
+  },
+  {
+    "title": "商品表示優先順変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/setItemDisplayPriority.html"
+  },
+  {
+    "title": "商品参照API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getItem.html"
+  },
+  {
+    "title": "商品削除API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/deleteItem.html"
+  },
+  {
+    "title": "商品個別反映API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/submitItem.html"
+  },
+  {
+    "title": "商品リストAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/myItemList.html"
+  },
+  {
+    "title": "商品アップロードAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/uploadItemFile.html"
+  },
+  {
+    "title": "在庫参照API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getStock.html"
+  },
+  {
+    "title": "在庫更新API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/setStock.html"
+  },
+  {
+    "title": "在庫アップロードAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/uploadStockFile.html"
+  },
+  {
+    "title": "商品画像一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/itemImageList.html"
+  },
+  {
+    "title": "商品画像アップロードAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/uploadItemImage.html"
+  },
+  {
+    "title": "商品画像一括アップロードAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/uploadItemImagePack.html"
+  },
+  {
+    "title": "商品画像削除API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/deleteItemImage.html"
+  },
+  {
+    "title": "追加画像一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/libImageList.html"
+  },
+  {
+    "title": "追加画像アップロードAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/uploadLibImage.html"
+  },
+  {
+    "title": "追加画像一括アップロードAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/uploadLibImagePack.html"
+  },
+  {
+    "title": "追加画像削除API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/deleteLibImage.html"
+  },
+  {
+    "title": "追加画像ディレクトリ一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/libDirectoryList.html"
+  },
+  {
+    "title": "追加画像ディレクトリ登録API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/addLibDirectory.html"
+  },
+  {
+    "title": "追加画像ディレクトリ変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/moveLibDirectory.html"
+  },
+  {
+    "title": "追加画像ディレクトリ削除API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/deleteLibDirectoy.html"
+  },
+  {
+    "title": "SHPカテゴリツリー取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getShopCategory.html"
+  },
+  {
+    "title": "SHPカテゴリ検索API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getShopCategoryList.html"
+  },
+  {
+    "title": "SHPカテゴリ/スペックダウンロードAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/downloadShopCategories.html"
+  },
+  {
+    "title": "SHPブランドコード検索API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getShopBrandList.html"
+  },
+  {
+    "title": "SHPブランドコードダウンロードAPI",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/downloadShopBrands.html"
+  },
+  {
+    "title": "ストアカテゴリ編集API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/editStCategory.html"
+  },
+  {
+    "title": "ストアカテゴリ参照API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getStCategory.html"
+  },
+  {
+    "title": "ストアカテゴリ一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/stCategoryList.html"
+  },
+  {
+    "title": "ストアカテゴリ移動API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/moveStCategory.html"
+  },
+  {
+    "title": "ストアカテゴリ削除API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/deleteStCategory.html"
+  },
+  {
+    "title": "ストアカテゴリ表示順序変更API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/sortCategories.html"
+  },
+  {
+    "title": "データチェック履歴一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/dataCheckHistorySummary.html"
+  },
+  {
+    "title": "データチェック履歴一覧API（v2）",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/v2/dataCheckHistorySummary.html"
+  },
+  {
+    "title": "データチェック履歴詳細API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/dataCheckHistoryDetail.html"
+  },
+  {
+    "title": "データチェック履歴詳細API（v2）",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/v2/dataCheckHistoryDetail.html"
+  },
+  {
+    "title": "反映履歴/未反映項目一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/publishHistorySummary.html"
+  },
+  {
+    "title": "反映履歴/未反映項目詳細API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/publishHistoryDetail.html"
+  },
+  {
+    "title": "反映履歴詳細API（v2）",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/v2/publishHistoryDetail.html"
+  },
+  {
+    "title": "全反映予約API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/reservePublish.html"
+  },
+  {
+    "title": "ダウンロード要求API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/downloadRequest.html"
+  },
+  {
+    "title": "ダウンロード準備完了通知API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/downloadList.html"
+  },
+  {
+    "title": "ダウンロード実行API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/downloadSubmit.html"
+  },
+  {
+    "title": "プレビューHTML参照API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getPreviewHtml.html"
+  },
+  {
+    "title": "カスタムページ参照API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getCustomPageDesign.html"
+  },
+  {
+    "title": "カスタムページ編集API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/editCustomPageDesign.html"
+  },
+  {
+    "title": "カスタムページ一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getCustomPageList.html"
+  },
+  {
+    "title": "カスタムページ削除API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/deleteCustomPage.html"
+  },
+  {
+    "title": "ストア設定フリースペース参照API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getStoreinfoFreespace.html"
+  },
+  {
+    "title": "ストア設定フリースペース編集API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/setStoreinfoFreespace.html"
+  },
+  {
+    "title": "メッセージ投稿API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/send.html"
+  },
+  {
+    "title": "質問詳細API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/detail.html"
+  },
+  {
+    "title": "質問一覧API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/list.html"
+  },
+  {
+    "title": "質問既読API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/read.html"
+  },
+  {
+    "title": "質問完了API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/complete.html"
+  },
+  {
+    "title": "質問非公開API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/access.html"
+  },
+  {
+    "title": "ファイル投稿API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/fileAdd.html"
+  },
+  {
+    "title": "ファイル取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/fileDownload.html"
+  },
+  {
+    "title": "ファイル削除API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/fileDelete.html"
+  },
+  {
+    "title": "ショッピング用セラー新規問い合わせ投稿API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/externalStoreTopic.html"
+  },
+  {
+    "title": "Yahoo!オークション用セラー新規問い合わせ投稿API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/question/externalAucStoretopic.html"
+  },
+  {
+    "title": "店頭在庫情報取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getRealStock.html"
+  },
+  {
+    "title": "店舗在庫情報登録更新API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/setRealStock.html"
+  },
+  {
+    "title": "店舗在庫情報削除API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/deleteRealStock.html"
+  },
+  {
+    "title": "複数店頭在庫情報取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getRealStockList.html"
+  },
+  {
+    "title": "店舗情報取得API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/getRealStore.html"
+  },
+  {
+    "title": "店舗情報登録更新API",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/setRealStore.html"
+  },
+  {
+    "title": "（新仕様）商品検索",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/v3/itemsearch.html"
+  },
+  {
+    "title": "高評価トレンドランキング",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/shopping/v1/highRatingTrendRanking.html"
+  },
+  {
+    "title": "カテゴリID取得",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/shopping/v1/categorysearch.html"
+  },
+  {
+    "title": "商品コード検索(商品詳細)",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/shopping/v1/itemlookup.html"
+  },
+  {
+    "title": "キーワードランキング（v2）",
+    "source": "https://developer.yahoo.co.jp/webapi/shopping/v2/queryranking.html"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mcp-yshop",
+  "version": "0.3.0",
+  "description": "Yahoo!ショッピングの公式104APIを操作します。対話式セットアップ・環境変数・AWS SSM認証に対応。"
+}
