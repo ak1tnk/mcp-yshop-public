@@ -49,7 +49,7 @@ npm run setup
   "mcpServers": {
     "yshop": {
       "command": "node",
-      "args": ["/absolute/path/mcp-yshop/dist/index.js"],
+      "args": ["/absolute/path/mcp-yshop-public/dist/index.js"],
       "env": { "YSHOP_AUTH_SOURCE": "local" }
     }
   }
@@ -59,7 +59,7 @@ npm run setup
 ローカルプラグイン向けの`plugin.json`と`${PLUGIN_ROOT}`を使う`mcp.json`も同梱しています。インストールとビルド後に使用します。実行時に他のローカルプロジェクトへ依存しません。
 
 ```sh
-codex mcp add yshop --env YSHOP_AUTH_SOURCE=local -- node /absolute/path/mcp-yshop/dist/index.js
+codex mcp add yshop --env YSHOP_AUTH_SOURCE=local -- node /absolute/path/mcp-yshop-public/dist/index.js
 ```
 
 `npm start`は標準入力でMCPメッセージを待ちます。通常はMCPクライアントから起動します。stdoutはMCPプロトコル専用です。

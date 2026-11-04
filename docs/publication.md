@@ -2,7 +2,15 @@
 
 公開先は[ak1tnk/mcp-yshop-public](https://github.com/ak1tnk/mcp-yshop-public)です。`public-repository.json`で同期先を管理します。
 
-開発用の非公開コピーと公開側は、Gitの履歴を共有しません。開発用コピーの`origin`はそのまま残し、`public`リモートを公開先への参照に使います。公開側には検査済みの最新ソースだけを、別のGitリポジトリから送信します。認証設定・禁止語の非公開ポリシー・ローカルファイル・開発側のコミットIDを公開コミットへ含めません。
+開発用の非公開コピーと公開側は、Gitの履歴を共有しません。開発用コピーの`origin`はそのまま残し、`public`リモートを公開先への参照に使います。`public`のpush URLは無効化し、直接の送信を防止します。公開側には検査済みの最新ソースだけを、別のGitリポジトリから送信します。認証設定・禁止語の非公開ポリシー・ローカルファイル・開発側のコミットIDを公開コミットへ含めません。
+
+別の開発用コピーへ同じ参照を設定する場合は、次を一度実行します。同期コマンドは`public-repository.json`を使用するため、このpush禁止設定の影響を受けません。
+
+```sh
+git remote add public https://github.com/ak1tnk/mcp-yshop-public.git
+git remote set-url --push public disabled://use-public-sync
+git fetch public main
+```
 
 ## 開発側から公開側へ送る
 
@@ -28,6 +36,12 @@ npm run public:sync -- --publish
 作業ツリーに未コミットの変更がある場合は停止します。初回は旧履歴のない1コミットを`main`へ送ります。2回目以降は公開側の`main`を親にした同期ブランチとPRを作成します。自動マージ・強制pushは行いません。内容が同じ場合は何も送りません。同じ公開元・内容のPRがあれば再利用します。
 
 PRの差分を確認し、`privacy`と`check`の成功後にマージしてください。公開側で受けた変更が開発側へ未反映の場合、同期PRに取り消しが含まれる場合があります。先に次の手順で変更を取り込みます。
+
+マージ時の著者メールにはGitHubのnoreplyアドレスを指定してください。GitHub CLIでは次の形で明示できます。`<...>`は自分のPRとGitHubのnoreplyアドレスに置き換えます。
+
+```sh
+gh pr merge <PR-URL> --squash --delete-branch --author-email <GitHub-noreply-email>
+```
 
 検査と作業用コピーは`out/public-sync/`へ作成します。開発側のコミットと公開側の対応は`out/public-sync-state.json`へ保存し、Gitの追跡対象にはしません。初期公開後の`main`はPRと必須チェックで保護します。
 
