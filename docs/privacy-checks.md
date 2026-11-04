@@ -54,6 +54,6 @@ Windows側へ渡す具体的な作業指示は[こちら](windows-review-handoff
 
 ## GitHub側で追加する設定
 
-公開先でGitHubのSecret scanningとPush protectionを有効にし、保護ブランチに`privacy`と`check`の成功を必須にします。設定やワークフローの変更は管理者がレビューします。公開リポジトリのSecret scanningは無料で実行されますが、Push protectionには対応する認証値の種類・サイズ等の制限があります。[GitHub公式](https://docs.github.com/en/code-security/concepts/secret-security/push-protection)
+公開先ではGitHubのSecret scanningとPush protectionを有効にしています。`main`はPRと`privacy`・`check`の成功を必須とし、管理者にも適用します。強制push・ブランチ削除は禁止しています。設定やワークフローの変更は管理者がレビューします。公開リポジトリのSecret scanningは無料で実行されますが、Push protectionには対応する認証値の種類・サイズ等の制限があります。[GitHub公式](https://docs.github.com/en/code-security/concepts/secret-security/push-protection)
 
 ローカルフックは`--no-verify`などで回避でき、CIはGitHubへ送信された後に動作します。CI単体では公開前の漏えいを止められません。フック・GitHubのpush時保護・レビューを組み合わせて運用してください。未対応形式や氏名などの文脈依存の情報は、人やAIの追加レビューが必要です。
